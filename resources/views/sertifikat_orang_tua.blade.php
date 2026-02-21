@@ -108,7 +108,7 @@
                     <th rowspan="2">NO</th>
                     <th rowspan="2">TRY OUT</th>
                     <th rowspan="2">TAHUN PELAJARAN</th>
-                    <th rowspan="2">SEMESTER</th>
+                    <!-- <th rowspan="2">SEMESTER</th> -->
                     <!-- Tampilkan mata pelajaran yang tidak termasuk TPS dan tidak kedinasan -->
                     @foreach ($mataPelajarans->where('opsi_test_tps', false)->where('opsi_kedinasan', false) as $mataPelajaran)
                         <th rowspan="2">{{ strtoupper($mataPelajaran->namaMataPelajaran) }}</th>
@@ -149,7 +149,7 @@
                         <td>{{ $index }}</td>
                         <td>{{ strtoupper($nilaiGroup->first()->tryout->nama_tryout) }}</td>
                         <td>{{ $nilaiGroup->first()->tryout->tahunPelajaran->nama_tahun_pelajaran }}</td>
-                        <td>{{ $nilaiGroup->first()->tryout->tahunPelajaran->semester == 1 ? 'GANJIL' : 'GENAP' }}</td>
+                        <!-- <td>{{ $nilaiGroup->first()->tryout->tahunPelajaran->semester == 1 ? 'GANJIL' : 'GENAP' }}</td> -->
                         <!-- Nilai untuk mata pelajaran tanpa TPS dan tanpa kedinasan -->
                         @foreach ($mataPelajarans->where('opsi_test_tps', false)->where('opsi_kedinasan', false) as $mataPelajaran)
                             {{-- <td>{{ $nilaiGroup->where('mata_pelajaran_id', $mataPelajaran->id)->first()->nilai ?? '-' }}</td> --}}

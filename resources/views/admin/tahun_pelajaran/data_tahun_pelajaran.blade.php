@@ -61,6 +61,7 @@
                                         <th>No</th>
                                         <th>Nama Tahun Pelajaran</th>
                                         <th>Semester</th>
+                                        <th>Status</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -70,6 +71,13 @@
                                         <td>{{ $tahunPelajarans->firstItem() + $index }}</td>
                                         <td>{{ $tahunPelajaran->nama_tahun_pelajaran }}</td>
                                         <td>{{ $tahunPelajaran->semester }}</td>
+                                        <td>
+                                            @if($tahunPelajaran->status == 1)
+                                                <span class="label label-success">Aktif</span>
+                                            @else
+                                                <span class="label label-danger">Nonaktif</span>
+                                            @endif
+                                        </td>
                                         <td class="text-nowrap">
                                             <a href="#" class="mr-25 edit-button" data-toggle="tooltip" data-original-title="Edit" data-id="{{ $tahunPelajaran->id }}" data-nama="{{ $tahunPelajaran->nama_tahun_pelajaran }}" data-semester="{{ $tahunPelajaran->semester }}" data-status="{{ $tahunPelajaran->status }}"> 
                                                 <i class="fa fa-pencil text-inverse m-r-10"></i> 

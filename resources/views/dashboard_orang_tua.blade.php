@@ -35,8 +35,9 @@
             <p>Perkembangan Studi Lanjut Siswa IMBOS</p>
 
             @if ($tahunPelajaranAktif)
-                <h2>Tahun Pelajaran Aktif: {{ $tahunPelajaranAktif->nama_tahun_pelajaran }} (Semester
-                    {{ $tahunPelajaranAktif->semester == 1 ? 'Ganjil' : 'Genap' }})</h2>
+                <!-- <h2>Tahun Pelajaran Aktif: {{ $tahunPelajaranAktif->nama_tahun_pelajaran }} (Semester
+                    {{ $tahunPelajaranAktif->semester == 1 ? 'Ganjil' : 'Genap' }})</h2> -->
+                <h2>Tahun Pelajaran Aktif: {{ $tahunPelajaranAktif->nama_tahun_pelajaran }}</h2>
             @else
                 <h2>Tahun Pelajaran Aktif: Tidak Ditemukan</h2>
             @endif
@@ -109,7 +110,7 @@
                                                 <th rowspan="2">No</th>
                                                 <th rowspan="2">Try Out</th>
                                                 <th rowspan="2">Tahun Pelajaran</th>
-                                                <th rowspan="2">Semester</th>
+                                                {{-- <th rowspan="2">Semester</th> --}}
 
                                                 <!-- Tampilkan mata pelajaran yang tidak termasuk TPS dan tidak kedinasan -->
                                                 @foreach ($mataPelajarans->where('opsi_test_tps', false)->where('opsi_kedinasan', false) as $mataPelajaran)
@@ -155,8 +156,8 @@
                                                     <td>{{ $nilaiGroup->first()->tryout?->nama_tryout }}</td>
                                                     <td>{{ $nilaiGroup->first()->tryout?->tahunPelajaran?->nama_tahun_pelajaran }}
                                                     </td>
-                                                    <td>{{ $nilaiGroup->first()->tryout?->tahunPelajaran?->semester == 1 ? 'Ganjil' : 'Genap' }}
-                                                    </td>
+                                                    {{-- <td>{{ $nilaiGroup->first()->tryout?->tahunPelajaran?->semester == 1 ? 'Ganjil' : 'Genap' }}
+                                                    </td> --}}
 
                                                     <!-- Nilai untuk mata pelajaran tanpa TPS dan tanpa kedinasan -->
                                                     @foreach ($mataPelajarans->where('opsi_test_tps', false)->where('opsi_kedinasan', false) as $mataPelajaran)

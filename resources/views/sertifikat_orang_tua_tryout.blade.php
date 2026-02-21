@@ -143,9 +143,11 @@
     <div class="center">
         <br>
         <h1>SERTIFIKAT HASIL</h1>
-        <p>{{ ucwords(strtolower($nilai->first()->first()->tryout->nama_tryout)) }} Tahun Pelajaran
+        <!-- <p>{{ ucwords(strtolower($nilai->first()->first()->tryout->nama_tryout)) }} Tahun Pelajaran
             {{ $nilai->first()->first()->tryout->tahunPelajaran->nama_tahun_pelajaran }} Semester
-            {{ $nilai->first()->first()->tryout->tahunPelajaran->semester == 1 ? 'Ganjil' : 'Genap' }}</p>
+            {{ $nilai->first()->first()->tryout->tahunPelajaran->semester == 1 ? 'Ganjil' : 'Genap' }}</p> -->
+        <p>{{ ucwords(strtolower($nilai->first()->first()->tryout->nama_tryout)) }} Tahun Pelajaran
+            {{ $nilai->first()->first()->tryout->tahunPelajaran->nama_tahun_pelajaran }}</p>
     </div>
     <div class="content">
         <div class="table-container">

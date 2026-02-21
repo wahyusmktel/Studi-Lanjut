@@ -64,7 +64,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Try Out</th>
-                                            <th>Tahun Pelajaran / Semester</th>
+                                            <th>Tahun Pelajaran</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -73,8 +73,7 @@
                                             <tr>
                                                 <td>{{ $tryouts->firstItem() + $index }}</td>
                                                 <td>{{ $tryout->nama_tryout }}</td>
-                                                <td>{{ $tryout->tahunPelajaran->nama_tahun_pelajaran }} -
-                                                    {{ $tryout->tahunPelajaran->semester }}</td>
+                                                <td>{{ $tryout->tahunPelajaran->nama_tahun_pelajaran }}</td>
                                                 <td class="text-nowrap">
                                                     <a href="#" class="mr-25 edit-btn" data-toggle="modal"
                                                         data-target="#editModal" data-id="{{ $tryout->id }}"
