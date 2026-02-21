@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <p>2024 &copy; Studi Lanjut IMBOS Pringsewu.</p>
+                <p>2026 &copy; Studi Lanjut IMBOS Pringsewu.</p>
             </div>
             <div class="col-sm-6 text-right">
                 <p>Follow Us</p>

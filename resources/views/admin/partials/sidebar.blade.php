@@ -16,7 +16,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#data_guru"
                 class="{{ Request::is('admin/guru*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/guru*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Data Guru</span>
+                <div class="pull-left"><i class="ti-user mr-20"></i><span class="right-nav-text">Data Guru</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
@@ -31,7 +31,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#data_master"
                 class="{{ Request::is('admin/mata_pelajaran*', 'admin/kelas*', 'admin/program_bimbel*', 'admin/siswa*', 'admin/tahun_pelajaran*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/mata_pelajaran*', 'admin/kelas*', 'admin/program_bimbel*', 'admin/siswa*', 'admin/tahun_pelajaran*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Master Data</span>
+                <div class="pull-left"><i class="ti-folder mr-20"></i><span class="right-nav-text">Master Data</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
@@ -59,7 +59,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#tryout"
                 class="{{ Request::is('admin/tryout*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/tryout*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Try Out</span>
+                <div class="pull-left"><i class="ti-flag mr-20"></i><span class="right-nav-text">Try Out</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
@@ -74,7 +74,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#nilai"
                 class="{{ Request::is('admin/nilai*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/nilai*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Nilai</span></div>
+                <div class="pull-left"><i class="ti-bar-chart mr-20"></i><span class="right-nav-text">Nilai</span></div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
             </a>
@@ -88,7 +88,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#absensi"
                 class="{{ Request::is('admin/absensi*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/absensi*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Absensi</span>
+                <div class="pull-left"><i class="ti-calendar mr-20"></i><span class="right-nav-text">Absensi</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
@@ -106,7 +106,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#alumni"
                 class="{{ Request::is('admin/alumni*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/alumni*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Alumni</span>
+                <div class="pull-left"><i class="ti-medall mr-20"></i><span class="right-nav-text">Alumni</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
@@ -124,7 +124,7 @@
             <a href="javascript:void(0);" data-toggle="collapse" data-target="#berita"
                 class="{{ Request::is('admin/berita*') ? 'active' : '' }}"
                 aria-expanded="{{ Request::is('admin/berita*') ? 'true' : 'false' }}">
-                <div class="pull-left"><i class="ti-dashboard mr-20"></i><span class="right-nav-text">Berita</span>
+                <div class="pull-left"><i class="ti-announcement mr-20"></i><span class="right-nav-text">Berita</span>
                 </div>
                 <div class="pull-right"><i class="ti-angle-down"></i></div>
                 <div class="clearfix"></div>
