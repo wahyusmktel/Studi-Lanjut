@@ -18,6 +18,18 @@
 </div>
 <!-- /Title -->
 
+<!-- Alert Info -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="alert alert-info alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <i class="zmdi zmdi-info-outline pr-15 pull-left"></i><p class="pull-left">Mulai tahun pelajaran 2025/2026 pengolahan data pada sistem dilakukan dalam <strong>satu tahun pelajaran</strong> bukan per semester. Untuk tahun berjalan cukup menggunakan satu semester. Data pada halaman orang tua sudah otomatis disesuaikan berdasarkan satu tahun pelajaran berjalan / aktif.</p>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- /Alert Info -->
+
 <!-- Row -->
 <div class="row">
     <div class="col-sm-12">
@@ -62,6 +74,7 @@
                                         <th>Nama Tahun Pelajaran</th>
                                         <th>Semester</th>
                                         <th>Status</th>
+                                        <th>Statistik Data</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -77,6 +90,13 @@
                                             @else
                                                 <span class="label label-danger">Nonaktif</span>
                                             @endif
+                                        </td>
+                                        <td>
+                                            <span class="label label-primary" data-toggle="tooltip" title="Total Siswa"><i class="fa fa-users"></i> {{ $tahunPelajaran->jml_siswa }}</span>
+                                            <span class="label label-info" data-toggle="tooltip" title="Total Kelompok"><i class="fa fa-sitemap"></i> {{ $tahunPelajaran->jml_kelas }}</span>
+                                            <span class="label label-success" data-toggle="tooltip" title="Total Kehadiran Siswa"><i class="fa fa-check-square-o"></i> {{ $tahunPelajaran->jml_absensi_siswa }}</span>
+                                            <span class="label label-warning" data-toggle="tooltip" title="Total Absensi Guru"><i class="fa fa-calendar-check-o"></i> {{ $tahunPelajaran->jml_absensi_guru }}</span>
+                                            <span class="label label-danger" data-toggle="tooltip" title="Total Nilai"><i class="fa fa-line-chart"></i> {{ $tahunPelajaran->jml_nilai }}</span>
                                         </td>
                                         <td class="text-nowrap">
                                             <a href="#" class="mr-25 edit-button" data-toggle="tooltip" data-original-title="Edit" data-id="{{ $tahunPelajaran->id }}" data-nama="{{ $tahunPelajaran->nama_tahun_pelajaran }}" data-semester="{{ $tahunPelajaran->semester }}" data-status="{{ $tahunPelajaran->status }}"> 

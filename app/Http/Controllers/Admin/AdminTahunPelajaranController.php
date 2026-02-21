@@ -22,6 +22,29 @@ class AdminTahunPelajaranController extends Controller
 
         $tahunPelajarans = $query->paginate(10);
 
+        foreach ($tahunPelajarans as $tp) {
+            $tp->jml_kelas = \App\Models\Kelas::withoutGlobalScope(\App\Scopes\TahunPelajaranScope::class)
+                ->where('tahun_pelajaran_id', $tp->id)->count();
+
+            $tp->jml_siswa = \App\Models\Siswa::whereHas('kelas', function($q) use ($tp) {
+                $q->withoutGlobalScope(\App\Scopes\TahunPelajaranScope::class)
+                  ->where('tahun_pelajaran_id', $tp->id);
+            })->count();
+
+            $tp->jml_absensi_guru = \App\Models\Absensi::withoutGlobalScope(\App\Scopes\TahunPelajaranScope::class)
+                ->where('tahun_pelajaran_id', $tp->id)->count();
+
+            $tp->jml_absensi_siswa = \App\Models\AbsensiDetail::whereHas('absensi', function($q) use ($tp) {
+                $q->withoutGlobalScope(\App\Scopes\TahunPelajaranScope::class)
+                  ->where('tahun_pelajaran_id', $tp->id);
+            })->count();
+
+            $tp->jml_nilai = \App\Models\Nilai::whereHas('tryout', function($q) use ($tp) {
+                $q->withoutGlobalScope(\App\Scopes\TahunPelajaranScope::class)
+                  ->where('tahun_pelajaran_id', $tp->id);
+            })->count();
+        }
+
         return view('admin.tahun_pelajaran.data_tahun_pelajaran', compact('tahunPelajarans'));
     }
 
